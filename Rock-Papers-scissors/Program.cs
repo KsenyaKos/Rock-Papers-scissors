@@ -94,6 +94,27 @@ namespace Rock_Papers_scissors
                         break;
                 }
             }
+            Console.WriteLine("*** RESULTS ***");
+            Console.WriteLine("Player Points : " + playerPoints);
+            Console.WriteLine("Computer Points : " + computerPoints);
+
+            if (playerPoints > computerPoints)
+            {
+                Console.WriteLine("Player Wins");
+            }
+            else
+            {
+                if (computerPoints > playerPoints)
+                {
+                    Console.WriteLine("Computer Wins");
+                }
+                else
+                {
+                    Console.WriteLine("Equal None Win");
+                }
+            }
+
+            Console.ReadLine();
         }
     }
 }
