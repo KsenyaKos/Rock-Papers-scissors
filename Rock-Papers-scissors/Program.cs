@@ -17,6 +17,83 @@ namespace Rock_Papers_scissors
             string[] hands = { "Rock", "Paper", "Sci" };
             int playerPoints = 0;
             int computerPoints = 0;
+            for (int counter = 1; counter <= numberOfRounds; counter++)
+            {
+                Console.Write("Player Hand : ");
+                string playerHand = Console.ReadLine();
+                int randomNumber = rnd.Next(0, 3);
+                string computerHand = hands[randomNumber];
+                Console.WriteLine("Computer Hand : " + computerHand);
+
+                switch (playerHand)
+                {
+                    case "Rock":
+                        if (computerHand == "Rock")
+                        {
+                            playerPoints++;
+                            computerPoints++;
+                            Console.WriteLine("Player And Computer Win a Point");
+                            Console.WriteLine();
+                        }
+                        if (computerHand == "Paper")
+                        {
+                            computerPoints++;
+                            Console.WriteLine("Computer wins a point");
+                            Console.WriteLine();
+                        }
+                        if (computerHand == "Sci")
+                        {
+                            playerPoints++;
+                            Console.WriteLine("Player wins a point");
+                            Console.WriteLine();
+                        }
+                        break;
+
+                    case "Paper":
+                        if (computerHand == "Paper")
+                        {
+                            playerPoints++;
+                            computerPoints++;
+                            Console.WriteLine("Player and Computer Win a Point");
+                            Console.WriteLine();
+                        }
+                        if (computerHand == "Sci")
+                        {
+                            computerPoints++;
+                            Console.WriteLine("Computer wins a point");
+                            Console.WriteLine();
+                        }
+                        if (computerHand == "Rock")
+                        {
+                            playerPoints++;
+                            Console.WriteLine("Player wins a point");
+                            Console.WriteLine();
+                        }
+                        break;
+
+                    case "Sci":
+                        if (computerHand == "Sci")
+                        {
+                            playerPoints++;
+                            computerPoints++;
+                            Console.WriteLine("Player and Computer Win a Point");
+                            Console.WriteLine();
+                        }
+                        if (computerHand == "Rock")
+                        {
+                            computerPoints++;
+                            Console.WriteLine("Computer wins a point");
+                            Console.WriteLine();
+                        }
+                        if (computerHand == "Paper")
+                        {
+                            playerPoints++;
+                            Console.WriteLine("Player wins a point");
+                            Console.WriteLine();
+                        }
+                        break;
+                }
+            }
         }
     }
 }
