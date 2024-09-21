@@ -10,7 +10,9 @@ namespace Rock_Papers_scissors
     {
         static void Main(string[] args)
         {
-            Console.Write("How many rounds do you want to play ? : ");
+            do
+            {
+                Console.Write("How many rounds do you want to play ? : ");
             int numberOfRounds = Convert.ToInt32(Console.ReadLine());
 
             Random rnd = new Random();
@@ -114,7 +116,8 @@ namespace Rock_Papers_scissors
                 }
             }
 
-            Console.ReadLine();
+                Console.Write("DO you want to play again?(y/n): ");
+            } while (Console.ReadLine().Trim().ToLower() == "y");
         }
     }
 }
